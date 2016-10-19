@@ -1,0 +1,400 @@
+//misc settings
+@import 'config/_settings';
+@import 'config/_mixins';
+@import 'config/_include-media';
+@import 'config/_slick';
+
+//frameworks
+
+//global things
+@import 'general/_reset';
+@import 'layout/_main';
+@import 'materialize.min';
+
+//pages
+#wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 980px;
+	padding: 0 20px;
+	@include media ('<tablet') {
+		padding: 0;
+	}
+}
+
+.intro{
+	background-size: cover;
+	padding-bottom: center;
+	min-height: 100vh;
+	color: white;
+	padding: 88px 0;
+	font-size: 16px;
+	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+	position: relative;
+	@include media ('<tablet') {
+		padding: 20px 0 60px;
+	}
+	.anchor{
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+	p{
+		margin-bottom: 66px;
+		@include media ('<tablet') {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+h1{
+	font-size: 56px;
+	line-height: 1;
+	font-family: "Roboto",sans-serif;
+	font-weight: 300;
+	margin-bottom: 22px;
+	color: #bbbbbb;
+	@include media ('<tablet') {
+		font-size: 30px;
+	}
+}
+
+.logo{
+	display: inline-block;
+	margin-bottom: 52px;
+	@include media ('<tablet') {
+		margin-bottom: 10px;
+	}
+}
+
+p{
+	margin-bottom: 28px;
+}
+
+.form-holder{
+	max-width: 380px;
+	margin: 0 auto;
+	background: white;
+	border-radius: 2px;
+	color: #3e3e3e;
+	padding: 23px 40px 26px;
+	font-family: "Roboto",sans-serif;
+	@include media ('<tablet') {
+		padding: 10px 20px;
+	}
+	h2{
+		font-size: 24px;
+		margin: 0 0 18px;
+	}
+	.input-field{
+		margin-top: 0;
+	}
+	.active{
+		color: #a7a8a8 !important;
+	}
+	input[type='text'],
+	input[type='email']{
+		font-size: 16px;
+		line-height: 24px;
+		padding: 5px 0;
+		height: 35px;
+		margin-bottom: 26px;
+	}
+	label{
+		left: 0;
+	}
+	button{
+		font-size: 16px;
+		background: #9c27b0;
+		height: 42px;
+		line-height: 42px;
+		padding: 0 15px;
+		min-width: 216px;
+		margin-top: -6px;
+		font-weight: 500;
+		box-shadow: none;
+	}
+}
+
+.promo{
+	position: relative;
+	overflow: hidden;
+	padding: 64px 0 20px;
+	@include media ('<tablet') {
+		padding: 20px 0;
+	}
+	h2{
+		margin-top: 0;
+		margin-bottom: 32px;
+	}
+	.text-holder{
+		padding-right: 60px;
+		@include media ('<desktop') {
+			padding-right: 0;
+		}
+	}
+	.img-holder{
+		padding-top: 9px;
+	}
+	.title{
+		display: block;
+		margin: 27px 0 26px;
+		font-size: 20px;
+	}
+}
+
+.block-features{
+	background: #fafafa;
+	position: relative;
+	overflow: hidden;
+	padding: 66px 0 49px;
+	@include media ('<tablet') {
+		padding: 20px 0;
+	}
+	.img-holder{
+		@include media ('<tablet') {
+			margin-bottom: 20px;
+		}
+	}
+	h2{
+		margin: 0 0 25px;
+		color: #5d5f60;
+	}
+	.more-space{
+		padding-top: 38px;
+		@include media ('<tablet') {
+			padding-top: 0;
+		}
+	}
+	.title{
+		display: block;
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+	ul{
+		
+		li{
+			padding-left: 94px;
+			margin-bottom: 47px;
+			@include media ('<tablet') {
+				padding-left: 45px;
+			}
+			position: relative;
+			&:before{
+				position: absolute;
+				left: 30px;
+				top: -10px;
+				content:' ';
+				vertical-align:middle;
+				display: inline-block;
+				background-image: url("../images/sprite/svg/sprite.svg");
+				background-repeat: no-repeat;
+				background-size: 2.6747em 5.3em;
+				background-position: 0em -1.4em;
+				width: 2.6747em;
+				height: 3.8997em;
+				transform: scale(0.73);
+				@include media ('<tablet') {
+					left: 0;
+				}
+			}
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		p{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.image-view{
+	overflow: hidden;
+	.img-holder{
+		float: left;
+		width: 25%;
+		height: 290px;
+		background-size: cover;
+		background-position: center;
+		@include media ('<1300px') {
+			height: 200px;
+		}
+		@include media ('<tablet') {
+			width: 50%;
+		}
+		@include media ('<phone') {
+			height: 150px;
+		}
+	}
+}
+
+h2{
+	font-size: 34px;
+	line-height: 40px;
+	@include media ('<tablet') {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+.block-faq{
+	background: #fafafa;
+	padding: 63px 0 20px;
+	@include media ('<tablet') {
+		padding: 20px 0;
+	}
+	h2{
+		margin: 0 0 22px;
+		color: #3f3f3f;
+	}
+	.more-space{
+		padding-top: 30px;
+	}
+	.title{
+		font-size: 20px;
+		display: block;
+		margin-bottom: 24px;
+	}
+	p{
+		margin-bottom: 36px;
+	}
+}
+
+.block-feature{
+	overflow: hidden;
+	position: relative;
+	padding: 36px 0 40px;
+	h2{
+		margin: 0 0 31px;
+	}
+	.list{
+		font-size: 0;
+		line-height: 0;
+		padding: 20px 0;
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			width: 25%;
+			padding: 0 10px;
+			position: relative;
+		}
+	}
+}
+
+.slick-gallery{
+	blockquote{
+		border: 0;
+		padding: 0;
+		margin: 0 auto 36px;
+		font-weight: 500;
+		max-width: 320px;
+		font-size: 16px;
+		p{
+			margin-bottom: 24px;
+			&:before{
+				content:'„';
+			}
+			&:after{
+				content:'”';
+			}
+		}
+		cite{
+			font-style: normal;
+			font-weight: 400;
+		}
+	}
+	img{
+		margin: 0 auto 53px;
+	}
+	.slick-dots{
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 6px;
+			&:hover button, &.slick-active button{
+				background: black;
+				border-color: black;
+			}
+		}
+		button{
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			font-size: 0;
+			line-height: 0;
+			border: 1px solid #7f7f7f;
+			padding: 0;
+			background: none;
+		}
+	}
+}
+
+.block-cta{
+	padding: 63px 0 55px;
+	background: #fafafa;
+	@include media ('<tablet') {
+		padding: 20px 0;
+	}
+	h2{
+		margin: 0 0 31px;
+	}
+	button{
+		font-size: 16px;
+		height: 42px;
+		line-height: 42px;
+		box-shadow: none;
+		background: #9c27b0;
+		font-weight: 500;
+	}
+}
+
+#footer{
+	padding: 49px 0;
+	@include media ('<tablet') {
+		padding: 20px 0;
+	}
+}
+
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../images/sprite/svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.6747em 5.3em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../images/sprite/svg/sprite.svg");
+}
+
+
+
+  .icon.arrow:before {
+      background-position: 0em 0em;
+      width: 2.3985em;
+      height: 1.3979em;
+  }
+
+
+
+
+  .icon.medal:before {
+      background-position: 0em -1.4em;
+      width: 2.6747em;
+      height: 3.8997em;
+  }
+
+
+
